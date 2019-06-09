@@ -1,0 +1,150 @@
+.section__three {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  min-height: 1040px;
+  background-color: rgb(44, 46, 61);
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .section__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1212px;
+    padding: 0 21px;
+  }
+
+  &-title {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: "MonsterRat-light";
+    font-size: 50px;
+    color: #3c3950;
+    text-transform: uppercase;
+    line-height: 75px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    min-width: 30%;
+
+    span {
+      color: #fdcd4d;
+    }
+
+    b {
+      font-family: "MonsterRat-bold";
+      color: #fff;
+
+      &.blue {
+        color: #00bcd4;
+      }
+    }
+
+    .icon {
+      font-size: 90px;
+      color: #fff;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        color: #00bcd4;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #00bcd4;
+      width: 170px;
+      height: 1px;
+    }
+  }
+
+  &-descr {
+    font-family: "MonsterRat-light";
+    font-size: 16px;
+    color: rgba(#fff, .5);
+    line-height: 37px;
+    margin-bottom: 30px;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-learnbtn {
+    font-family: "MonsterRat-light";
+    font-size: 19px;
+    color: #00bcd4;
+    border: 1px solid;
+    border-color: #00bcd4;
+    background-color: transparent;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      background-color: #00bcd4;
+      color: #fff;
+    }
+  }
+
+  &-body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 34%;
+      margin-top: 130px;
+      overflow: hidden;
+    }
+
+    .members {
+      &__wrap {
+        position: relative;
+        max-width: 350px;
+      }
+
+      &__pic {
+        width: 100%;
+      }
+
+      &__content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 15px 25px;
+        background-color: rgba(#000, .5);
+        color: #fff;
+      }
+    }
+  }
+}

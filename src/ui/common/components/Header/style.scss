@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 50px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 100;
+  transition: .3s;
+
+  &.active {
+    background-color: #fff;
+    padding: 20px 40px;
+
+    .header__logo {
+      h3 {
+        color: #3c3950;
+      }
+    }
+
+    .header__menu {
+      &-btn {
+        span, &:after, &::before {
+          background-color: #3c3950;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+
+    &-img {
+      height: 28px;
+      width: 28px;
+      margin-right: 10px;
+    }
+    h3 {
+      font-family: "MonsterRat-bold";
+      font-size: 25px;
+      color: #fff;
+      transition: .3s;
+    }
+  }
+
+  &__menu {
+    &-btn {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: .6s;
+
+      span, &:after, &:before {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        background-color: #fff;
+        border-radius: 15px;
+        transition: .6s;
+      }
+
+      span {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+
+      &:after {
+        content: "";
+        top: 5px;
+      }
+
+      &:before {
+        content: "";
+        top: auto;
+        bottom: 5px;
+      }
+
+      &.active {
+        margin-right: 350px;
+
+        span {
+          opacity: 0;
+        }
+
+        &:after {
+          transform: rotate(45deg) translateY(12px);
+        }
+
+        &:before {
+          transform: rotate(-45deg) translateY(-12px);
+        }
+      }
+    }
+
+    &-list {
+      position: fixed;
+      width: 350px;
+      height: 100vh;
+      top: 0;
+      right: -350px;
+      background: #fff;
+      padding: 100px 30px 0 60px;
+      transition: .6s;
+      list-style: none;
+
+      &.active {
+        right: 0;
+      }
+    }
+
+    &-item {
+      margin-bottom: 15px;
+      
+      a {
+        font-family: "Monsterrat-bold";
+        font-family: 14px;
+        text-decoration: none;
+        color: #3c3950;
+      }
+    }
+  }
+}

@@ -1,22 +1,22 @@
 import * as React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 
-import logo from './logo.svg';
+import Home from '@ui/Home';
+import Header from '@ui/common/components/Header';
+// import Footer from '@ui/common/components/Footer';
 
-class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+import './App.scss';
+
+library.add(faTrophy);
+
+const App: React.SFC = () => (
+  <Router>
+    <Header />
+    <Route path="/" component={Home} />
+    {/* <Footer /> */}
+  </Router>
+);
 
 export default App;

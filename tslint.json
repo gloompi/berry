@@ -1,10 +1,14 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
-  "linterOptions": {
-    "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts",
-      "coverage/lcov-report/*.js"
-    ]
-  }
+  "extends": ["tslint-config-airbnb", "tslint-react"],
+  "rules": {
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+    "trailing-comma": false,
+    "align": false,
+    "no-this-assignment": true,
+    "strict-boolean-expressions": [true, "allow-null-union", "allow-undefined-union"],
+    "import-name": false,
+    "jsx-boolean-value": [true, "never"],
+    "jsx-no-multiline-js": false
+  },
+  "defaultSeverity": "warning"
 }
